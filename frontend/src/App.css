@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  width: 80%;
+  max-width: 1200px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 40px;
+}
+
+/* Título principal */
+.page-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input e Botão */
+.task-input-container input,
+.task-input-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+  color: #333;
+}
+
+.task-input-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.task-input-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de tarefas */
+.tasks-container {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.task-list-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  color: #ff5733;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilização do filtro */
+.task-filter {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Grid das tarefas */
+.task-list {
+  max-height: 400px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.task-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  color: #333;
+  text-align: left;
+}
+
+/* Se a tarefa estiver concluída, o fundo ficará rosa */
+.task-card.completed {
+  background: #f8c8dc !important;
+  color: #444;
+}
+
+/* Cabeçalho da tarefa */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-header h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #444;
+  margin: 0;
+}
+
+.task-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.task-footer input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  padding: 5px 10px;
+  font-size: 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+/* Estiliza o card quando não há tarefas */
+/* Estiliza o card quando não há tarefas */
+.placeholder-card {
+  background-color: #6a0dad; /* Roxo */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Altura fixa para não ficar desproporcional */
+  overflow: hidden; /* Impede que o texto ultrapasse o card */
+  word-wrap: break-word; /* Quebra de linha automática */
+  text-align: center; /* Centraliza o texto */
+}
